@@ -28,7 +28,7 @@ public class PrivateMessageNotificationService {
 
     @Async
     public boolean notifyPrivateMessage(UUID recipientId, String senderUsername, String message) {
-        Optional<String> optionalTargetServerIp = this.getServerIpForPlayer(UUID.randomUUID());
+        Optional<String> optionalTargetServerIp = this.getServerIpForPlayer(recipientId);
         if (optionalTargetServerIp.isEmpty()) return false;
         String targetServerIp = optionalTargetServerIp.get();
 
