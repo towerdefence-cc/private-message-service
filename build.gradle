@@ -7,9 +7,9 @@ plugins {
     id("io.freefair.lombok") version "6.5.1"
 }
 
-group = 'cc.towerdefence.api'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+group = "cc.towerdefence.api"
+version = "0.0.1-SNAPSHOT"
+sourceCompatibility = "17"
 
 repositories {
     mavenCentral()
@@ -20,8 +20,8 @@ dependencies {
     implementation("net.devh:grpc-server-spring-boot-starter:2.13.1.RELEASE") {
         exclude group: "io.grpc", module: "grpc-netty-shaded" // causes version conflicts, provided by the proto SDK
     }
-    implementation("cc.towerdefence.api:grpc-sdk:0e7c477")
-    implementation('io.kubernetes:client-java:16.0.1')
+    implementation("cc.towerdefence.api:grpc-sdk:46c9b02")
+    implementation("io.kubernetes:client-java:16.0.2")
 
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
